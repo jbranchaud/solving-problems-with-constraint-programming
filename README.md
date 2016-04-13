@@ -1,5 +1,10 @@
 # Solving Puzzles with Constraint Programming
 
+## Clojure and Loco
+
+> A number of puzzles solved in Clojure using
+[Loco](https://github.com/aengelberg/loco)
+
 To work with any of these puzzle solvers, you'll want to boot up a lein
 repl:
 
@@ -7,7 +12,7 @@ repl:
 $ lein repl
 ```
 
-## Sudoku
+### Sudoku
 
 Load the formulation of the sudoku puzzle
 
@@ -21,7 +26,7 @@ Get a solution with
 (solution model)
 ```
 
-## 4 Queens
+### 4 Queens
 
 Load the formulation of the 4 Queens puzzle
 
@@ -31,7 +36,7 @@ Load the formulation of the 4 Queens puzzle
 
 No solution at the moment.
 
-## 4 Queens (Numeric)
+### 4 Queens (Numeric)
 
 Load the formulation of the 4 Queens puzzle
 
@@ -45,7 +50,7 @@ Get all the solutions with
 (solutions model)
 ```
 
-## [8 Queens](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
+### [8 Queens](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
 
 Load the formulation of the 8 Queens puzzle
 
