@@ -41,7 +41,7 @@ Load the formulation of the 4 Queens puzzle
 
 Get all the solutions with
 
-```
+```clojure
 (solutions model)
 ```
 
