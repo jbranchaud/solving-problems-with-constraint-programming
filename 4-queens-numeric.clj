@@ -37,5 +37,3 @@
 
 ; Define the model for solving
 (def model (flatten [variable-domains constraints]))
-
-(solutions model)

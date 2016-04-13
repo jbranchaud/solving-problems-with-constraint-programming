@@ -30,3 +30,17 @@ Load the formulation of the 4 Queens puzzle
 ```
 
 No solution at the moment.
+
+## 4 Queens (Numeric)
+
+Load the formulation of the 4 Queens puzzle
+
+```clojure
+(load-file "./4-queens-numeric.clj")
+```
+
+Get all the solutions with
+
+```
+(solutions model)
+```
