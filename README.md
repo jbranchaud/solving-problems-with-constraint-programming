@@ -44,3 +44,23 @@ Get all the solutions with
 ```
 (solutions model)
 ```
+
+## 8 Queens
+
+Load the formulation of the 8 Queens puzzle
+
+```clojure
+(load-file "./8-queens.clj")
+```
+
+Get all the solutions with
+
+```clojure
+(solutions model)
+```
+
+Check how many solutions were found (there should be 92)
+
+```clojure
+(count (solutions model))
+```
