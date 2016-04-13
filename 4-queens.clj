@@ -43,6 +43,6 @@
 
 ; Associate variables with domains
 (def variable-domains (vec (map #($in % domains) variables)))
-(println variable-domains)
 
-(solutions (flatten [variable-domains relations]))
+; Define the model for solving
+(def model (flatten [variable-domains relations]))
