@@ -69,3 +69,21 @@ Check how many solutions were found (there should be 92)
 ```clojure
 (count (solutions model))
 ```
+
+## Z3
+
+> Constraint programming with Microsoft's [Z3](http://rise4fun.com/Z3)
+> Theorem Prover
+
+Use Z3 in the browser at [rise4fun/z3](http://rise4fun.com/Z3).
+
+```
+(declare-fun x () Int)
+(declare-fun y () Int)
+(declare-fun z () Int)
+
+(assert (> x y))
+(assert (> y z))
+(assert (> z x))
+(check-sat)
+```
