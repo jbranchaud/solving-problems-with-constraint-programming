@@ -87,3 +87,9 @@ Use Z3 in the browser at [rise4fun/z3](http://rise4fun.com/Z3).
 (assert (> z x))
 (check-sat)
 ```
+
+## License
+
+&copy; 2016 Josh Branchaud
+
+Licensed under the MIT license
