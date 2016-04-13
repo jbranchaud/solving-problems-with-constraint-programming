@@ -2,7 +2,6 @@
 
 (use 'loco.core)
 (use 'loco.constraints)
-(use '[clojure.math.combinatorics :as combo])
 
 ;;;
 ;;; Variables
@@ -19,7 +18,6 @@
 ;;;
 ;;; Constraints
 ;;;
-
 (defn create-relation
   [variables value-pairs]
   (let [[x y] variables]
