@@ -45,7 +45,7 @@ Get all the solutions with
 (solutions model)
 ```
 
-## 8 Queens
+## [8 Queens](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
 
 Load the formulation of the 8 Queens puzzle
 
