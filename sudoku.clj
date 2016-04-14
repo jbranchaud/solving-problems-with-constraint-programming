@@ -30,13 +30,13 @@
 (def letters '("a" "b" "c" "d" "e" "f" "g" "h" "i"))
 (def numbers (range 0 9))
 
-(defn some_positions
+(defn some-positions
   [set-x set-y]
   (for [x set-x y set-y]
     (keyword (str x y))))
 
-(def all_positions
-  (some_positions letters numbers))
+(def all-positions
+  (some-positions letters numbers))
 
 (defn pair-positions
   [positions]
@@ -46,11 +46,11 @@
           y positions]
       (vector x y))))
 
-(defn position_pairs
+(defn position-pairs
   [set-x set-y]
-  (pair-positions (some_positions set-x set-y)))
+  (pair-positions (some-positions set-x set-y)))
 
-(def all_position_pairs (position_pairs letters numbers))
+(def all-position-pairs (position-pairs letters numbers))
 (def box-positions
   (for [x (partition 3 letters)
         y (partition 3 numbers)]
@@ -58,24 +58,24 @@
           n y]
       (keyword (str m n)))))
 
-(def all_row_position_pairs (mapcat (fn [x] (position_pairs [x] numbers)) letters))
-(def all_column_position_pairs (mapcat (fn [x] (position_pairs letters [x])) numbers))
-(def all_box_position_pairs (mapcat (fn [x] (pair-positions x)) box-positions))
+(def all-row-position-pairs (mapcat (fn [x] (position-pairs [x] numbers)) letters))
+(def all-column-position-pairs (mapcat (fn [x] (position-pairs letters [x])) numbers))
+(def all-box-position-pairs (mapcat (fn [x] (pair-positions x)) box-positions))
 
-(def row_constraints
+(def row-constraints
   (map
     (fn [[x y]] ($!= x y))
-    all_row_position_pairs))
+    all-row-position-pairs))
 
-(def column_constraints
+(def column-constraints
   (map
     (fn [[x y]] ($!= x y))
-    all_column_position_pairs))
+    all-column-position-pairs))
 
 (def box-constraints
   (map
     (fn [[x y]] ($!= x y))
-    all_box_position_pairs))
+    all-box-position-pairs))
 
 (defn bound-all-positions
   [board]
@@ -91,8 +91,8 @@
     concat
     []
     [(bound-all-positions board)
-     row_constraints
-     column_constraints
+     row-constraints
+     column-constraints
      box-constraints]))
 
 (def expected-result
